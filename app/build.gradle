@@ -1,16 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
     namespace 'com.jiwondev.nearbook_android'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.jiwondev.nearbook_android"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -37,7 +38,10 @@ android {
 }
 
 dependencies {
-    def nav_version = "2.5.3"
+    ext {
+        nav_version = '2.5.3'
+        room_version = '2.5.0'
+    }
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.0'
@@ -74,8 +78,8 @@ dependencies {
     // Lifecycle
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
 
-    // DataStore
-    implementation "androidx.datastore:datastore-preferences:1.0.0"
-
-
+    // Room
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 }
