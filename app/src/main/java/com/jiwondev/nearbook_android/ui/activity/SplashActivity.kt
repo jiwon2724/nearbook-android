@@ -18,7 +18,6 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         getUser()
-        // test
     }
 
     private fun getUser() {
