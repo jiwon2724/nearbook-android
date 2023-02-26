@@ -14,27 +14,28 @@
         android:layout_marginTop="20dp"
         android:text="닉네임"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/nicknameEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"></EditText>
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+    </EditText>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/setNicknameTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:text="Button"
-
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="@+id/editText" />
+        app:layout_constraintEnd_toEndOf="@+id/nicknameEditText"
+        app:layout_constraintStart_toStartOf="@+id/nicknameEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
