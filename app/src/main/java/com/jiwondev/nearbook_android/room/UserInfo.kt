@@ -1,4 +1,4 @@
-package com.jiwondev.nearbook_android.room.entities
+package com.jiwondev.nearbook_android.room
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

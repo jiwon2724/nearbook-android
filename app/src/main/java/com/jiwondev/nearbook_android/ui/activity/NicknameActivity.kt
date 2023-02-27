@@ -1,13 +1,10 @@
 package com.jiwondev.nearbook_android.ui.activity
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.databinding.ActivityNicknameBinding
 import com.jiwondev.nearbook_android.resource.NearbookApplication
-import com.jiwondev.nearbook_android.room.entities.UserInfo
+import com.jiwondev.nearbook_android.room.UserInfo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

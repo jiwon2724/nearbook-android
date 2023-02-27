@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.resource.NearbookApplication
-import com.jiwondev.nearbook_android.room.NearbookRoomDatabase
-import com.jiwondev.nearbook_android.room.entities.UserInfo
 import kotlinx.coroutines.*
 
 class SplashActivity : AppCompatActivity() {
