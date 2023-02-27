@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nearHomeFragment"
+        android:title="@string/near_home">
+    </item>
+
+    <item android:id="@+id/libraryFragment"
+        android:title="@string/library">
+    </item>
+
+    <item android:id="@+id/myPageFragment"
+        android:title="@string/my_page">
+    </item>
+
+</menu>
