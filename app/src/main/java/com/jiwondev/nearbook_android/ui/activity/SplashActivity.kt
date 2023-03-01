@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.resource.NearbookApplication
 import kotlinx.coroutines.*
@@ -23,7 +24,11 @@ class SplashActivity : AppCompatActivity() {
             val userInfo = database.gentUserInfo()
 
             withContext(Dispatchers.Main) {
-                userInfo?.let { moveActivity(MainActivity::class.java) } ?: moveActivity(NicknameActivity::class.java)
+                Log.d("userInfo : ", userInfo.toString())
+                when(userInfo.isEmpty()) {
+                    true -> moveActivity(NicknameActivity::class.java)
+                    false -> moveActivity(MainActivity::class.java)
+                }
             }
         }
     }

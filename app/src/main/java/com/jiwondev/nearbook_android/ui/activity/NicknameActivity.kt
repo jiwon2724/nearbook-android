@@ -34,9 +34,10 @@ class NicknameActivity : BaseActivity<ActivityNicknameBinding>({ActivityNickname
             database.insertNickname(UserInfo(binding.nicknameEditText.text.toString()))
 
             withContext(Dispatchers.Main) {
-                database.gentUserInfo()?.let {
-                    moveActivity(MainActivity::class.java)
-                } ?: showToast(getString(R.string.failed_set_nickname))
+                when(database.gentUserInfo().isEmpty()) {
+                    true -> showToast(getString(R.string.failed_set_nickname))
+                    false -> moveActivity(MainActivity::class.java)
+                }
             }
         }
     }
