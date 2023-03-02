@@ -16,43 +16,40 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     // 프래그먼트가 액티비티에 붙을 때 호출되고 액티비티와 연결 설정
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d(TAG, "onAttach")
+        Log.d("HomeFragment", "onAttach")
     }
 
     // 프래그 먼트가 생성될 때 호출, 초기화 작업 수행
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate")
+        Log.d("HomeFragment", "onCreate")
     }
 
     // 프래그먼트가 최초로 생성될 때 호출되는 메소드. 프래그먼트 뷰 계층 구조(XML 레이아웃)를 생성하고 초기화 한다. 그 이후 반환한다.
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        Log.d(TAG, "onCreateView")
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     // onCreateView 메소드에서 반환한 View 객체가 프래그먼트의 View 계층 구조에 추가된 직후에 호출. -> View가 생성됨을 보장한다.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d(TAG, "onViewCreated")
-        Toast.makeText(requireContext(), binding.searchBookButton.text.toString(), Toast.LENGTH_SHORT).show()
     }
 
     // View의 상태를 복원할 때 호출 ex) checkbox의 isChecked
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        Log.d(TAG, "onViewStateRestored")
+        Log.d("HomeFragment", "onViewStateRestored")
         super.onViewStateRestored(savedInstanceState)
     }
 
     // 프래그먼트가 화면에 보일 준비가 됐음.
     override fun onStart() {
-        Log.d(TAG, "onStart")
+        Log.d("HomeFragment", "onStart")
         super.onStart()
     }
 
     // 프래그먼트가 화면에 포커스를 받음. 사용자와의 상호작용 시작
     override fun onResume() {
-        Log.d(TAG, "onResume")
+        Log.d("HomeFragment", "onResume")
         super.onResume()
     }
 
