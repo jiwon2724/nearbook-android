@@ -10,7 +10,9 @@ import android.widget.Toast
 import androidx.viewbinding.ViewBinding
 import com.jiwondev.nearbook_android.R
 
-abstract class BaseActivity<T : ViewBinding>(val bindingFactory: (LayoutInflater) -> T) : AppCompatActivity() {
+abstract class BaseActivity<T : ViewBinding>(
+    private val bindingFactory: (LayoutInflater) -> T
+) : AppCompatActivity() {
     private lateinit var _binding: T
     val binding get() = _binding
 

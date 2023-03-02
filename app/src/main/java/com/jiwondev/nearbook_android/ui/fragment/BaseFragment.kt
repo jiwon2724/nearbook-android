@@ -5,16 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewbinding.ViewBinding
 import com.jiwondev.nearbook_android.R
+abstract class BaseFragment<T: ViewBinding>(
+    private val bindingFactory: (LayoutInflater, ViewGroup?, Boolean) -> T
+) : Fragment() {
+    private var _binding: T? = null
+    val binding get() = _binding!!
 
-
-class LibraryFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_library, container, false)
+        _binding = bindingFactory.invoke(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

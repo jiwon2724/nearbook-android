@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.widget.Toast
 import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.resource.NearbookApplication
 import kotlinx.coroutines.*
@@ -24,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
             val userInfo = database.gentUserInfo()
 
             withContext(Dispatchers.Main) {
-                Log.d("userInfo : ", userInfo.toString())
+                Toast.makeText(this@SplashActivity, "userInfo : ${userInfo}", Toast.LENGTH_SHORT).show()
                 when(userInfo.isEmpty()) {
                     true -> moveActivity(NicknameActivity::class.java)
                     false -> moveActivity(MainActivity::class.java)
