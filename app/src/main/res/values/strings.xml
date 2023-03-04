@@ -3,6 +3,7 @@
     <string name="input_nickname">닉네임을 입력해주세요.</string>
     <string name="failed_set_nickname">닉네임 설정에 실패했습니다.</string>
     <string name="near_home">니어홈</string>
+    <string name="search_book">도서검색</string>
     <string name="library">라이브러리</string>
     <string name="my_page">마이페이지</string>
     <!-- TODO: Remove or change this placeholder text -->

@@ -10,8 +10,6 @@ import android.widget.Toast
 import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.databinding.FragmentHomeBinding
 
-const val TAG = "HomeFragment"
-
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
     // 프래그먼트가 액티비티에 붙을 때 호출되고 액티비티와 연결 설정
     override fun onAttach(context: Context) {
@@ -66,20 +64,17 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
     // 프래그먼트가 뷰를 제거할 때 호출. 이 때 프래그먼트의 뷰가 제거된다.
     // 하지만 프래그먼트 객체 자체는 사라지지 않고 메모리에 남아있다.
     override fun onDestroyView() {
-        Log.d(TAG, "onDestroyView")
         super.onDestroyView()
     }
 
     // 프래그먼트가 소멸될 때 호출된다. 이 때 프래그먼트가 할당된 메모리가 해제된다.
     // 프래그먼트 객체가 소멸된다.
     override fun onDestroy() {
-        Log.d(TAG, "onDestroy")
         super.onDestroy()
     }
 
     // 프래그먼트가 액티비티와 연결이 끊어질 때 호출된다. 프래그먼트는 액티비티에서 분리된다.
     override fun onDetach() {
-        Log.d(TAG, "onDetach")
         super.onDetach()
     }
 }
