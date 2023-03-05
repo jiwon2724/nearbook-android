@@ -7,7 +7,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.databinding.ActivityMainBinding
 import com.jiwondev.nearbook_android.databinding.ActivityNicknameBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inflate(it)}) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
