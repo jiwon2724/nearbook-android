@@ -11,11 +11,11 @@ import retrofit2.http.Query
 
 interface ApiInterface {
     @GET(GET_SEARCH_BOOK_LIST)
-    fun getSearchResponse(
+    suspend fun getSearchBookResponse(
         @Header("X-Naver-Client-Id") id: String = BuildConfig.NAVER_CLIENT_ID,
         @Header("X-Naver-Client-Secret") secret: String = BuildConfig.NAVER_CLIENT_SECRET,
         @Query("query") query: String,
         @Query("display") display: Int = 20,
-        @Query("start") start: Int
+        @Query("start") start: Int = 1
     ) : Response<BookResponse>
 }

@@ -1,4 +1,6 @@
 package com.jiwondev.nearbook_android.network
+import com.jiwondev.nearbook_android.data.book.datasource.BookDataSource
+import com.jiwondev.nearbook_android.data.book.datasource.BookDataSourceImpl
 import com.jiwondev.nearbook_android.resource.Constant.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
