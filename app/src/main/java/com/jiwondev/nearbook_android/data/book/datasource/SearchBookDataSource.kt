@@ -1,4 +1,8 @@
 package com.jiwondev.nearbook_android.data.book.datasource
 
-class SearchBookDataSource {
+import javax.inject.Inject
+
+
+class SearchBookDataSource @Inject constructor() {
+
 }

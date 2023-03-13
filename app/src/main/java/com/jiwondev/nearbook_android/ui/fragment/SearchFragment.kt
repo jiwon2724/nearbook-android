@@ -10,10 +10,13 @@ import com.jiwondev.nearbook_android.R
 import com.jiwondev.nearbook_android.databinding.FragmentSearchBinding
 import com.jiwondev.nearbook_android.ui.viewmodel.SearchBookViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SearchFragment : BaseFragment<FragmentSearchBinding>(FragmentSearchBinding::inflate) {
-    private val searchViewModel: SearchBookViewModel by viewModels()
+     private val searchViewModel: SearchBookViewModel by viewModels()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

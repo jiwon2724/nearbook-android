@@ -9,7 +9,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SearchBookViewModel @Inject constructor(
-    private val searchBookDataSource: SearchBookDataSource,
     private val searchBookRepository: SearchBookRepository
 ) : ViewModel() {
 
